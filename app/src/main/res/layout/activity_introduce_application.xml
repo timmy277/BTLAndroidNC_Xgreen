@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".GUI.IntroduceApplication">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/statusbar_gradient"
+        android:elevation="15dp">
+
+        <TextView
+            android:id="@+id/Back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_back" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/songxanh" />
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:text="Phiên bản ứng dụng 1.0"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:text="XGREEN - TÁI CHẾ APP"
+            android:textColor="#BFBBBB" />
+        <TextView
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:text="Chưa được cấp phép bởi:"
+            android:textColor="@color/black" />
+        <TextView
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:text="Trường Đại học Mở HN"
+            android:textColor="@color/black" />
+        <TextView
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:text="96 Định Công- Hoàng Mai - HN"
+            android:textColor="@color/black" />
+        <ImageView
+            android:id="@+id/imgBoCongThuong"
+            android:layout_gravity="bottom|center"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/logo_bocongthuong" />
+
+    </LinearLayout>
+</LinearLayout>

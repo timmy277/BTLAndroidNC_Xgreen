@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginLeft="15sp"
+    tools:context=".Fragment.SellFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15sp"
+        android:layout_marginBottom="10sp"
+        android:text="Đặt lịch thu gom"
+        android:textColor="@color/lightblack"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Vui lòng chọn địa chỉ và thời gian thu gom mong muốn"
+        android:textColor="@color/lightblack"
+        android:textSize="20sp"
+
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20sp">
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/location"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15sp"
+            android:text="Địa chỉ đã lưu"
+            android:textColor="@color/lightblack"
+            android:textSize="20sp"
+            android:gravity="center_vertical"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thêm"
+            android:textColor="@color/white"
+            android:background="@color/green"
+            android:layout_marginLeft="50sp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20sp">
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/time"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15sp"
+            android:text="Thời gian thu gom"
+            android:textColor="@color/lightblack"
+            android:textSize="20sp"
+            android:gravity="center_vertical" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/gray"
+        android:layout_marginTop="20sp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20sp">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ngày trong tuần"
+                android:textColor="@color/white" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thứ 7 - Chủ nhật"
+                android:textColor="@color/white"
+                android:layout_marginLeft="50sp"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15sp"
+            android:text="Giờ thu gom : 08:00 - 21:00"
+            android:layout_marginTop="20sp"
+            android:textColor="@color/green"
+            android:textSize="20sp"
+            android:gravity="center_vertical"
+            />
+    </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Xác nhận"
+        android:textColor="@color/white"
+        android:background="@color/green"
+        android:layout_marginTop="50sp"/>
+</LinearLayout>

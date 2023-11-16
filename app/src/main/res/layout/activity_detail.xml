@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".GUI.DetailActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/statusbar_gradient"
+        android:elevation="15dp">
+
+        <TextView
+            android:id="@+id/detailBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Yêu cầu"
+            android:textColor="@color/lightblack"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgProductDetail"
+                android:layout_width="250dp"
+                android:layout_height="350dp"
+                android:layout_gravity="center"
+                android:src="@drawable/satton" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/border_top_left_right_linearlayout"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtProductNameDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:padding="15dp"
+                    android:text="Tên sản phẩm"
+                    android:textColor="@color/lightblack"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtProductPriceDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:text="29.000 đ"
+                    android:textColor="@color/lightblack"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtProductDescDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5sp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/black" />
+                <TextView
+                    android:id="@+id/txtId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Giá đã bao gồm thu gom tận nơi" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5sp"
+                    android:text="" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <EditText
+                        android:drawableStart="@drawable/ic_note"
+                        android:drawablePadding="15dp"
+                        android:id="@+id/edtNote"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:backgroundTint="@color/transparent"
+                        android:textSize="15sp"
+                        android:hint="Ghi chú" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    <TextView
+        android:text="ía sp"
+        android:visibility="gone"
+        android:id="@+id/txtHiden"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_marginLeft="15dp"
+                android:id="@+id/btnDown"
+                android:layout_width="35dp"
+                android:textSize="25dp"
+                android:layout_height="35dp"
+                android:background="@drawable/button_border"
+                android:text="-" />
+
+            <TextView
+                android:id="@+id/txtCountProduct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:textColor="@color/black"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/btnUp"
+                android:layout_width="35dp"
+                android:textSize="25dp"
+                android:layout_height="35dp"
+                android:background="@drawable/button_border"
+                android:text="+" />
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btnTotal"
+            android:layout_width="150dp"
+            android:enabled="false"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/button_rounded"
+            android:gravity="center"
+            android:text="Tổng cộng"
+            android:textAllCaps="false"
+            android:textColor="@color/lightblack" />
+    </RelativeLayout>
+
+</RelativeLayout>

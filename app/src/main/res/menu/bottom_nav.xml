@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/actionHome"
+        android:title="Trang Chủ"
+        android:icon="@drawable/ic_home"/>
+    <item
+        android:id="@+id/actionOrder"
+        android:title="Đổi quà"
+        android:icon="@drawable/ic_order"/>
+    <item
+        android:id="@+id/actionSell"
+        android:title="Tôi bán"
+        android:icon="@drawable/ic_order"/>
+    <item
+        android:id="@+id/actionHistory"
+        android:title="Lịch sử"
+        android:icon="@drawable/ic_history"/>
+    <item
+        android:id="@+id/actionOther"
+        android:title="Khác"
+        android:icon="@drawable/ic_other"/>
+</menu>

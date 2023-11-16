@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Fragment.KhacFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/statusbar_gradient"
+        android:elevation="15dp">
+        <TextView
+            android:id="@+id/txtUsername"
+            android:drawableLeft="@drawable/ic_person"
+            android:drawablePadding="10sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Tên khách hàng | THÀNH VIÊN"
+            android:textColor="@color/lightblack"
+            android:textSize="20sp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/gray">
+        <!-- Tài khoản -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:paddingLeft="15dp"
+            android:textColor="@color/black"
+            android:text="Tài khoản"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_margin="15dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:background="@drawable/linearlayout_rounded">
+            <Button
+                android:textSize="15sp"
+                android:id="@+id/btnProfile"
+                android:padding="15dp"
+                android:drawableStart="@drawable/ic_person"
+                android:drawableEnd="@drawable/ic_forward"
+                android:drawablePadding="15dp"
+                android:text="Thông tin cá nhân"
+                android:textAllCaps="false"
+                android:background="@color/transparent"
+                android:gravity="center|left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <View
+                android:id="@+id/v1"
+                android:layout_width="match_parent"
+                android:background="@color/gray"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_height="1dp"/>
+            <Button
+                android:textSize="15sp"
+                android:id="@+id/btnLogout"
+                android:padding="15dp"
+                android:background="@color/transparent"
+                android:textAllCaps="false"
+                android:visibility="visible"
+                android:drawableStart="@drawable/ic_logout"
+                android:drawableEnd="@drawable/ic_forward"
+                android:drawablePadding="15dp"
+                android:gravity="center|left"
+                android:text="Đăng xuất"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:textSize="15sp"
+                android:id="@+id/btnLogin"
+                android:visibility="gone"
+                android:background="@color/transparent"
+                android:textAllCaps="false"
+                android:padding="15dp"
+                android:drawableStart="@drawable/ic_logout"
+                android:drawableEnd="@drawable/ic_forward"
+                android:drawablePadding="15dp"
+                android:gravity="center|left"
+                android:text="Đăng nhập"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <!-- Tiện ích -->
+        <TextView
+            android:id="@+id/txtTienIch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:paddingLeft="15dp"
+            android:textColor="@color/black"
+            android:text="Tiện ích"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+        <LinearLayout
+            android:id="@+id/llnTienIch"
+            android:layout_width="match_parent"
+            android:layout_margin="15dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:background="@drawable/linearlayout_rounded">
+            <Button
+                android:id="@+id/btnActive"
+                android:textSize="15sp"
+                android:background="@color/transparent"
+                android:textAllCaps="false"
+                android:padding="15dp"
+                android:drawableStart="@drawable/ic_history"
+                android:drawableEnd="@drawable/ic_forward"
+                android:drawablePadding="15dp"
+                android:gravity="center|left"
+                android:text="Hoạt động"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <View
+                android:layout_width="match_parent"
+                android:background="@color/gray"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_height="1dp"/>
+            <Button
+                android:id="@+id/btnIntroduce"
+                android:textSize="15sp"
+                android:background="@color/transparent"
+                android:textAllCaps="false"
+                android:padding="15dp"
+                android:drawableStart="@drawable/ic_info"
+                android:drawableEnd="@drawable/ic_forward"
+                android:drawablePadding="15dp"
+                android:gravity="center|left"
+                android:text="Giới thiệu về ứng dụng"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/xgreen"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Corn"
+        tools:targetApi="31">
+
+        <activity
+            android:name=".GUI.SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Corn">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".GUI.PendingDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GUI.HistoryDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GUI.CartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GUI.DetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GUI.IntroduceApplication"
+            android:exported="false" />
+        <activity
+            android:name=".GUI.Infomation"
+            android:exported="false"
+            android:theme="@style/Theme.Corn" />
+        <activity
+            android:name=".GUI.Home"
+            android:exported="false" />
+        <activity
+            android:name=".GUI.LoginActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Xgreen" />
+        <activity
+            android:name=".GUI.RegisterActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Xgreen" />
+        <activity
+            android:name=".GUI.MainActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Corn">
+
+        </activity>
+
+    </application>
+
+</manifest>
