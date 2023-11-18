@@ -35,36 +35,11 @@ public class CoffeeFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
 
-        String cafe = "-NX9ppXXBjY8T0_6wBy5"; // Mã danh mục Cafe
-        DatabaseReference databaseRef = FirebaseDatabase.getInstance().getReference().child("sanpham");
-        Query query_cafe = databaseRef.orderByChild("madm").equalTo(cafe);
-
-        query_cafe.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                productCafe.clear();
-                for (DataSnapshot data : snapshot.getChildren()) {
-                    String id = data.getKey();
-                    String name = data.child("tensp").getValue(String.class);
-                    String desc = data.child("motasp").getValue(String.class);
-                    String price = String.valueOf(data.child("giasp").getValue(Long.class)); // đối với dạng số "50000"
-                    /*String price = data.child("giasp").getValue(String.class); // đối với dạng số "50000" // dạng string*/
-                    String imageUrl = data.child("hinhsp").getValue(String.class);
-                    DBProduct product = new DBProduct(id,name, desc, price, imageUrl);
-                    productCafe.add(product);
-                }
-                adapterCafe.notifyDataSetChanged();
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-            }
-        });
-
-//        FirebaseDatabase database = FirebaseDatabase.getInstance();
-//        DatabaseReference reference = database.getReference("sanpham");
+//        String cafe = "-NX9ppXXBjY8T0_6wBy5"; // Mã danh mục Cafe
+//        DatabaseReference databaseRef = FirebaseDatabase.getInstance().getReference().child("sanpham");
+//        Query query_cafe = databaseRef.orderByChild("madm").equalTo(cafe);
 //
-//        reference.addValueEventListener(new ValueEventListener() {
+//        query_cafe.addValueEventListener(new ValueEventListener() {
 //            @Override
 //            public void onDataChange(@NonNull DataSnapshot snapshot) {
 //                productCafe.clear();
@@ -85,6 +60,31 @@ public class CoffeeFragment extends Fragment {
 //            public void onCancelled(@NonNull DatabaseError error) {
 //            }
 //        });
+
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference reference = database.getReference("sanpham");
+
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                productCafe.clear();
+                for (DataSnapshot data : snapshot.getChildren()) {
+                    String id = data.getKey();
+                    String name = data.child("tensp").getValue(String.class);
+                    String desc = data.child("motasp").getValue(String.class);
+                    String price = String.valueOf(data.child("giasp").getValue(Long.class)); // đối với dạng số "50000"
+                    /*String price = data.child("giasp").getValue(String.class); // đối với dạng số "50000" // dạng string*/
+                    String imageUrl = data.child("hinhsp").getValue(String.class);
+                    DBProduct product = new DBProduct(id,name, desc, price, imageUrl);
+                    productCafe.add(product);
+                }
+                adapterCafe.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+            }
+        });
         super.onCreate(savedInstanceState);
     }
 
