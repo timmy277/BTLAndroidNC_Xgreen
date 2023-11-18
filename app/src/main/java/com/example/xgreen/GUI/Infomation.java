@@ -206,7 +206,6 @@ public class Infomation extends AppCompatActivity {
                         String name = snapshot.child("name").getValue(String.class);
                         String phone = snapshot.child("phone").getValue(String.class);
                         String address = snapshot.child("address").getValue(String.class);
-
                         edtMailShow.setText(email);
                         edtHoTen.setText(name);
                         edtDienThoai.setText(phone);
