@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "733104007456",
-    "project_id": "xgreen-ab5e1",
-    "storage_bucket": "xgreen-ab5e1.appspot.com"
+    "project_number": "1036982438240",
+    "project_id": "xgreeng15",
+    "storage_bucket": "xgreeng15.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:733104007456:android:b5fc6153c12694fe9f4f45",
+        "mobilesdk_app_id": "1:1036982438240:android:255170ef3f188270b0b605",
         "android_client_info": {
           "package_name": "com.example.xgreen"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyAr64GNgi0AOlOuVanX2jG6M84CdTVKHes"
+          "current_key": "AIzaSyCxZDGS7KP_yUkGEZM5FIVhkDqYDTnjfNg"
         }
       ],
       "services": {
