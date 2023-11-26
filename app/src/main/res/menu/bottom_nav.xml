@@ -6,10 +6,6 @@
         android:icon="@drawable/ic_home"/>
     <item
         android:id="@+id/actionOrder"
-        android:title="Đổi quà"
-        android:icon="@drawable/ic_order"/>
-    <item
-        android:id="@+id/actionSell"
         android:title="Tôi bán"
         android:icon="@drawable/ic_order"/>
     <item

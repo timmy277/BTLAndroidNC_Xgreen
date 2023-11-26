@@ -57,7 +57,6 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback {
                                 double latitude = location.getLatitude();
                                 double longitude = location.getLongitude();
 
-                                // Gửi thông tin vị trí cho người khác (ví dụ: qua SMS, email, hoặc gửi lên máy chủ)
                                  shareLocationWithOthers(latitude, longitude);
                             }
                         }

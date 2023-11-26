@@ -1,14 +1,13 @@
 {
   "project_info": {
-    "project_number": "409968909029",
-    "firebase_url": "https://g15android-default-rtdb.asia-southeast1.firebasedatabase.app",
-    "project_id": "g15android",
-    "storage_bucket": "g15android.appspot.com"
+    "project_number": "655842347031",
+    "project_id": "xgreentuan",
+    "storage_bucket": "xgreentuan.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:409968909029:android:2c334ed155dc1159dc920c",
+        "mobilesdk_app_id": "1:655842347031:android:a60de3519c008af0ef3452",
         "android_client_info": {
           "package_name": "com.example.xgreen"
         }
@@ -16,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyAP7Y7IpESbRuicDFwGLCQdJOj8wbtwR7Y"
+          "current_key": "AIzaSyAQSPBxbGNpSRUiwpWyJhG9NF-tqOm66bg"
         }
       ],
       "services": {
