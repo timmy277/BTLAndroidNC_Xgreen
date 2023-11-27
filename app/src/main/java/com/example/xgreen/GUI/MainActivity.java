@@ -15,7 +15,6 @@ import com.example.xgreen.Fragment.DatHangFragment;
 import com.example.xgreen.Fragment.HoatDongFragment;
 import com.example.xgreen.Fragment.KhacFragment;
 import com.example.xgreen.Fragment.TrangChuFragment;
-import com.example.xgreen.Fragment.SellFragment;
 import com.example.xgreen.R;
 
 public class MainActivity extends AppCompatActivity {

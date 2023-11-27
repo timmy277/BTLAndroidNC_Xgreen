@@ -53,7 +53,7 @@ public class HistoryFragment extends Fragment {
         FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
         if (currentUser != null) {
             String userId = currentUser.getUid();
-            String tinhtrang = "Đã giao";
+            String tinhtrang = "Đã hủy";
             dathangRef.orderByChild("makh").equalTo(userId).addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {

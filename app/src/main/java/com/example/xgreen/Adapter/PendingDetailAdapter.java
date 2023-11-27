@@ -31,7 +31,7 @@ public class PendingDetailAdapter extends RecyclerView.Adapter<PendingDetailAdap
             txtProductCartCountPending = itemView.findViewById(R.id.txtProductCartCount);
             txtProductCartNamePending = itemView.findViewById(R.id.txtProductCartName);
             txtProductCartPricePending = itemView.findViewById(R.id.txtProductCartPrice);
-            txtPriceBeforePending = itemView.findViewById(R.id.txtPriceBefore);
+//            txtPriceBeforePending = itemView.findViewById(R.id.txtPriceBefore);
             cardViewPending = itemView.findViewById(R.id.cardViewPending);
         }
     }

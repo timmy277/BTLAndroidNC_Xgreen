@@ -18,17 +18,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-                <!--Cà Phê-->
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="15sp"
-                    android:layout_marginTop="15sp"
-                    android:layout_marginBottom="10sp"
-                    android:text="Giấy hồ sơ"
-                    android:textColor="@color/lightblack"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginLeft="15sp"-->
+<!--                    android:layout_marginTop="15sp"-->
+<!--                    android:layout_marginBottom="10sp"-->
+<!--                    android:text="Giấy hồ sơ"-->
+<!--                    android:textColor="@color/lightblack"-->
+<!--                    android:textSize="20sp"-->
+<!--                    android:textStyle="bold" />-->
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerViewCafe"

@@ -3,17 +3,18 @@ package com.example.xgreen.Database;
 import java.util.Map;
 
 public class DBOrder {
-    String makh, madh, thoigiandh, ghichudh, tinhtrang;
+    String makh, madh, thoigiandh,thoigianthu, ghichudh, tinhtrang;
     int soluongdh, tongtiendh;
     private Map<String, DBCart> sanpham;
 
     public DBOrder() {
     }
 
-    public DBOrder(String makh, String madh, String thoigiandh, String ghichudh, String tinhtrang, int soluongdh, int tongtiendh, Map<String, DBCart> sanpham) {
+    public DBOrder(String makh, String madh, String thoigiandh, String thoigianthu, String ghichudh, String tinhtrang, int soluongdh, int tongtiendh, Map<String, DBCart> sanpham) {
         this.makh = makh;
         this.madh = madh;
         this.thoigiandh = thoigiandh;
+        this.thoigianthu = thoigianthu;
         this.ghichudh = ghichudh;
         this.tinhtrang = tinhtrang;
         this.soluongdh = soluongdh;
@@ -43,6 +44,14 @@ public class DBOrder {
 
     public void setThoigiandh(String thoigiandh) {
         this.thoigiandh = thoigiandh;
+    }
+
+    public String getThoigianthu() {
+        return thoigianthu;
+    }
+
+    public void setThoigianthu(String thoigianthu) {
+        this.thoigianthu = thoigianthu;
     }
 
     public String getGhichudh() {

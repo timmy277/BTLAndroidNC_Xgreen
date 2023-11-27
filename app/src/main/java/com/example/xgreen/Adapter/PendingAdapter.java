@@ -82,10 +82,13 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
         }
         DBOrder order = orderList.get(position);
         holder.txtDateOrder.setText(order.getThoigiandh());
+        holder.txtDateCollect.setText(order.getThoigianthu());
+
         double updatedPrice = order.getTongtiendh();
         DecimalFormat decimalFormat = new DecimalFormat("#,### đ");
         String formattedPrice = decimalFormat.format(updatedPrice);
         /*holder.txtTotalPriceOrder.setText(order.getMadh());*/
+
         holder.txtTotalPriceOrder.setText(formattedPrice);
         holder.txtStatusDonHang.setText(order.getTinhtrang());
 
@@ -126,7 +129,7 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView txtDateOrder, txtTotalPriceOrder, txtStatus, txtStatusPending, txtStatusDonHang;
+        TextView txtDateOrder,txtDateCollect, txtTotalPriceOrder, txtStatus, txtStatusPending, txtStatusDonHang;
         Button btnReOrder, btnXacNhan;
         RecyclerView recyclerView;
         public CardView cardViewPending;
@@ -134,6 +137,7 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             txtDateOrder = itemView.findViewById(R.id.txtDateOrder);
+            txtDateCollect = itemView.findViewById(R.id.txtDateCollect);
             txtTotalPriceOrder = itemView.findViewById(R.id.txtTotalPriceOrder);
             txtStatus = itemView.findViewById(R.id.txtStatusRecyclerView);
             txtStatusDonHang = itemView.findViewById(R.id.txtStatusRecyclerView);

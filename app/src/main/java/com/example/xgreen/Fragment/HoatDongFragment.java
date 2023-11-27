@@ -33,10 +33,7 @@ public class HoatDongFragment extends Fragment {
                 (tab, position) -> {
                     switch (position) {
                         case 0:
-                            tab.setText("Đang diễn ra");
-                            break;
-                        case 1:
-                            tab.setText("Lịch sử yêu cầu");
+                            tab.setText("Lịch sử đặt lịch");
                             break;
                     }
                 }).attach();

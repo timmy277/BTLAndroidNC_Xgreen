@@ -1,5 +1,6 @@
 package com.example.xgreen.GUI;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -12,6 +13,7 @@ import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.DatePicker;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -36,10 +38,12 @@ import com.example.xgreen.R;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
+
 
 public class CartActivity extends AppCompatActivity {
     private DatabaseReference database;
@@ -50,7 +54,12 @@ public class CartActivity extends AppCompatActivity {
     private Button btnDatHang, btnOrder;
     private CartAdapter cartAdapter;
     private EditText edtNote;
+
+    private Button btnDatePicker;
+    private TextView tvSelectedDate;
     private ArrayList<DBCart> cartItems;
+
+    private String selectedDate;
 
 
     @Override
@@ -65,7 +74,7 @@ public class CartActivity extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.recyclerViewCart);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        txtPrice = findViewById(R.id.txtPrice);
+//        txtPrice = findViewById(R.id.txtPrice);
         txtTotalPrice = findViewById(R.id.txtTotalPrice);
         txtName = findViewById(R.id.txtName);
         txtAddress = findViewById(R.id.txtAddress);
@@ -80,6 +89,10 @@ public class CartActivity extends AppCompatActivity {
         relay1 = findViewById(R.id.relay1);
         relay2 = findViewById(R.id.relay2);
         edtNote = findViewById(R.id.edtNote);
+
+        btnDatePicker = findViewById(R.id.btnDatePicker);
+        tvSelectedDate = findViewById(R.id.tvSelectedDate);
+
         loadCartItems();
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
         String currentDateAndTime = sdf.format(new Date());
@@ -131,7 +144,46 @@ public class CartActivity extends AppCompatActivity {
                 createOrder();
             }
         });
+
+
+        btnDatePicker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDatePickerDialog();
+            }
+        });
     }
+
+
+    private void showDatePickerDialog() {
+        // Lấy ngày hiện tại
+        Calendar calendar = Calendar.getInstance();
+        int year = calendar.get(Calendar.YEAR);
+        int month = calendar.get(Calendar.MONTH);
+        int day = calendar.get(Calendar.DAY_OF_MONTH);
+
+        // Hiển thị DatePickerDialog
+        DatePickerDialog datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                        // Xử lý khi người dùng chọn ngày
+                        selectedDate = formatDate(year, month, dayOfMonth);
+                        tvSelectedDate.setText(selectedDate);
+                    }
+                },
+                year, month, day);
+
+        datePickerDialog.show();
+    }
+
+    private String formatDate(int year, int month, int day) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(year, month, day);
+
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
+        return sdf.format(calendar.getTime());
+    }
+
 
 
     private void loadCartItems() {
@@ -217,11 +269,12 @@ public class CartActivity extends AppCompatActivity {
         // Hiển thị tổng giá tiền và tổng giá tiền + chi phí phát sinh
         DecimalFormat decimalFormat = new DecimalFormat("#,### đ");
         String totalPriceText = decimalFormat.format(totalPrice);
-        String totalWithExtraFeeText = decimalFormat.format(totalPrice + 30000); // Tổng giá tiền + 30,000 (chi phí phát sinh)
+//        String totalWithExtraFeeText = decimalFormat.format(totalPrice + 30000); // Tổng giá tiền + 30,000 (chi phí phát sinh)
 
-        txtPrice.setText(totalPriceText);
-        txtTotalPrice.setText(totalWithExtraFeeText);
-        btnOrder.setText("Đặt Hàng " + "(" + totalWithExtraFeeText + ")");
+//        txtPrice.setText(totalPriceText);
+//        txtTotalPrice.setText(totalWithExtraFeeText);
+        txtTotalPrice.setText(totalPriceText);
+        btnOrder.setText("Đặt Lịch " + "(" + totalPriceText + ")");
     }
 
 
@@ -325,10 +378,12 @@ public class CartActivity extends AppCompatActivity {
 
                     String currentTime = new SimpleDateFormat("dd/MM/yyyy HH:mm", Locale.getDefault()).format(new Date());
                     String note = edtNote.getText().toString();
+//                    String collectTime = tvSelectedDate.toString();
                     int totalAmount = calculateTotalAmount();
                     // Tạo một đối tượng DBOrder mới từ dữ liệu hiện tại
-                    DBOrder dbOrder = new DBOrder(userId, orderId, currentTime, note, "Đang chờ xác nhận", cartItems.size(), totalAmount, convertCartItemsToMap(cartItems));
+                    DBOrder dbOrder = new DBOrder(userId, orderId, currentTime,selectedDate, note, "Đang chờ xác nhận", cartItems.size(), totalAmount, convertCartItemsToMap(cartItems));
                     dbOrder.setTongtiendh(totalAmount);
+                    dbOrder.setThoigianthu(selectedDate);
                     // Gửi đối tượng DBOrder đến nhánh "dathang"
                     database.child("dathang").child(orderId).setValue(dbOrder)
                             .addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -372,7 +427,7 @@ public class CartActivity extends AppCompatActivity {
         for (DBCart cartItem : cartItems) {
             totalAmount += cartItem.getTongtien();
         }
-        totalAmount += 30000; // Cộng thêm 30,000, chi phí giao hàng phí tax đã tính vào giá sản phẩm
+//        totalAmount += 30000; // Cộng thêm 30,000, chi phí giao hàng phí tax đã tính vào giá sản phẩm
         return totalAmount;
     }
 

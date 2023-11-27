@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "655842347031",
-    "project_id": "xgreentuan",
-    "storage_bucket": "xgreentuan.appspot.com"
+    "project_number": "841207890593",
+    "project_id": "tuanbtlandroidnc",
+    "storage_bucket": "tuanbtlandroidnc.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:655842347031:android:a60de3519c008af0ef3452",
+        "mobilesdk_app_id": "1:841207890593:android:a0c834e0e986ec0431e6e0",
         "android_client_info": {
           "package_name": "com.example.xgreen"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyAQSPBxbGNpSRUiwpWyJhG9NF-tqOm66bg"
+          "current_key": "AIzaSyDIKnX6m7fTIpS3ezSKk__w1bCvnXN-Yng"
         }
       ],
       "services": {

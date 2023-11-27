@@ -78,6 +78,8 @@ public class CoffeeFragment extends Fragment {
                     DBProduct product = new DBProduct(id,name, desc, price, imageUrl);
                     productCafe.add(product);
                 }
+                adapterCafe.sortByPriceDescending();
+//                adapterCafe.sortByPriceAscending();
                 adapterCafe.notifyDataSetChanged();
             }
 
@@ -115,6 +117,7 @@ public class CoffeeFragment extends Fragment {
         recyclerViewCafe = view.findViewById(R.id.recyclerViewCafe);
         productCafe = new ArrayList<>();
         adapterCafe = new ProductAdapter(productCafe);
+        adapterCafe.sortByPriceDescending();
         recyclerViewCafe.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerViewCafe.setAdapter(adapterCafe);
         return view;

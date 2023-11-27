@@ -108,18 +108,6 @@ public class DatHangFragment extends Fragment {
             switch (position) {
                 case 0:
                     return new CoffeeFragment();
-                case 1:
-                    return new MilkTeaFragment();
-                case 2:
-                    return new TeaFragment();
-                case 3:
-                    return new SmoothiesFragment();
-                case 4:
-                    return new FoodSnackFragment();
-                case 5:
-                    return new PackageFragment();
-                case 6:
-                    return new OtherFragment();
                 default:
                     return new CoffeeFragment();
             }
@@ -127,7 +115,7 @@ public class DatHangFragment extends Fragment {
 
         @Override
         public int getItemCount() {
-            return 7;
+            return 1;
         }
 
         @Nullable
@@ -135,25 +123,7 @@ public class DatHangFragment extends Fragment {
             String title = "";
             switch (position) {
                 case 0:
-                    title = "Giấy báo";
-                    break;
-                case 1:
-                    title = "Sắt đặc";
-                    break;
-                case 2:
-                    title = "Giấy thùng";
-                    break;
-                case 3:
-                    title = "Sắt vụn";
-                    break;
-                case 4:
-                    title = "Giấy hồ sơ";
-                    break;
-                case 5:
-                    title = "Sắt tôn";
-                    break;
-                case 6:
-                    title = "Lon nhôm";
+                    title = "Bảng giá muốn bán";
                     break;
             }
             return title;

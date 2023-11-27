@@ -85,7 +85,7 @@ public class PendingDetailActivity extends AppCompatActivity {
         txtDC = findViewById(R.id.txtDC);
         txtDate = findViewById(R.id.txtDate);
         txtTotalPriceHistory = findViewById(R.id.txtTotalPriceHistory);
-        txtPriceBefore = findViewById(R.id.txtPriceBefore);
+//        txtPriceBefore = findViewById(R.id.txtPriceBefore);
         btnXacNhan = findViewById(R.id.btnXacNhan);
         btnHuyDon = findViewById(R.id.btnXoaDH);
         txtMaDH.setVisibility(View.GONE);
@@ -137,9 +137,9 @@ public class PendingDetailActivity extends AppCompatActivity {
                                         String formattedPrice = decimalFormat.format(updatedPrice);
                                         txtTotalPriceHistory.setText(formattedPrice);
                                         /*Tiền tạm tính*/
-                                        double priceBefore = updatedPrice - 30000;
-                                        String formattedPriceBefore = decimalFormat.format(priceBefore);
-                                        txtPriceBefore.setText(formattedPriceBefore);
+//                                        double priceBefore = updatedPrice - 30000;
+//                                        String formattedPriceBefore = decimalFormat.format(priceBefore);
+//                                        txtPriceBefore.setText(formattedPriceBefore);
 
                                         // Lấy danh sách sản phẩm từ đơn hàng
                                         Map<String, DBCart> sanpham = order.getSanpham();

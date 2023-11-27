@@ -1,6 +1,7 @@
 package com.example.xgreen.Adapter;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -105,6 +106,18 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.MyViewHo
                 v.getContext().startActivity(intent);
             }
         });
+
+        switch (order.getTinhtrang()){
+            default:
+                holder.cardViewHistory.setCardBackgroundColor(Color.parseColor("#FF9191"));
+                break;
+            case "Đang giao":
+                holder.cardViewHistory.setCardBackgroundColor(Color.parseColor("#FFF48D"));
+                break;
+            case "Đã hủy":
+                holder.cardViewHistory.setCardBackgroundColor(Color.parseColor("#FF9191"));
+                break;
+        }
     }
 
     @Override

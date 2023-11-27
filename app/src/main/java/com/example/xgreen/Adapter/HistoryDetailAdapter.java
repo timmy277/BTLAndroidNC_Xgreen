@@ -29,7 +29,7 @@ public class HistoryDetailAdapter extends RecyclerView.Adapter<HistoryDetailAdap
             txtProductCartCount = itemView.findViewById(R.id.txtProductCartCount);
             txtProductCartName = itemView.findViewById(R.id.txtProductCartName);
             txtProductCartPrice = itemView.findViewById(R.id.txtProductCartPrice);
-            txtPriceBefore = itemView.findViewById(R.id.txtPriceBefore);
+//            txtPriceBefore = itemView.findViewById(R.id.txtPriceBefore);
         }
     }
 

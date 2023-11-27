@@ -20,6 +20,8 @@ import com.example.xgreen.GUI.DetailActivity;
 import com.example.xgreen.R;
 
 import java.text.DecimalFormat;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHolder> {
@@ -30,6 +32,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
 
         this.productList = productList;
         databaseReference = FirebaseDatabase.getInstance().getReference("sanpham");
+
     }
 
     @NonNull
@@ -91,4 +94,31 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
             llnAdd = itemView.findViewById(R.id.llnAdd);
         }
     }
+
+    public void sortByPriceAscending() {
+        Collections.sort(productList, new Comparator<DBProduct>() {
+            @Override
+            public int compare(DBProduct dbProduct1, DBProduct dbProduct2) {
+                double price1 = Double.parseDouble(dbProduct1.getPrice());
+                double price2 = Double.parseDouble(dbProduct2.getPrice());
+
+                return Double.compare(price1, price2);
+            }
+        });
+        notifyDataSetChanged();
+    }
+
+    public void sortByPriceDescending() {
+        Collections.sort(productList, new Comparator<DBProduct>() {
+            @Override
+            public int compare(DBProduct product1, DBProduct product2) {
+                double price1 = Double.parseDouble(product1.getPrice());
+                double price2 = Double.parseDouble(product2.getPrice());
+
+                return Double.compare(price2, price1);
+            }
+        });
+        notifyDataSetChanged();
+    }
+
 }

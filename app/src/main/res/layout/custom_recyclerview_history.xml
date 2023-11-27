@@ -22,7 +22,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:textStyle="bold"
-                android:text="Đơn hàng ngày: "
+                android:text="Ngày đặt lịch: "
                 android:textColor="@color/black" />
 
             <TextView
@@ -30,6 +30,26 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/txtText"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="12/06/2023, 15:03"
+                android:textColor="@color/lightblack" />
+            <TextView
+                android:id="@+id/txtText2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:text="Ngày thu gom: "
+                android:textColor="@color/black"
+                android:layout_below="@id/txtDateOrder"/>
+
+            <TextView
+                android:id="@+id/txtDateCollect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtText2"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:text="12/06/2023, 15:03"
@@ -66,13 +86,13 @@
                 android:id="@+id/btnReOrder"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/txtDateOrder"
+                android:layout_below="@id/txtDateCollect"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="5sp"
                 android:background="@color/transparent"
                 android:drawableEnd="@drawable/ic_continue"
                 android:drawablePadding="5sp"
-                android:text="Chi tiết đơn hàng"
+                android:text="Chi tiết lịch thu gom"
                 android:textAllCaps="false" />
         </RelativeLayout>
 

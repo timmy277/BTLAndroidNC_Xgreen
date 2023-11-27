@@ -54,8 +54,8 @@ public class PendingFragment extends Fragment {
         if (currentUser != null) {
             String userId = currentUser.getUid();
             String tinhtrang = "Đang chờ xác nhận";
-            String tinhtrang1 = "Đang giao";
-            String tinhtrang2 = "Đã hủy";
+//            String tinhtrang1 = "Đang giao";
+//            String tinhtrang2 = "Đã hủy";
             txtNoAccount.setVisibility(View.GONE);
             dathangRef.orderByChild("makh").equalTo(userId).addValueEventListener(new ValueEventListener() {
                 @Override
@@ -64,7 +64,7 @@ public class PendingFragment extends Fragment {
                     for (DataSnapshot orderSnapshot : snapshot.getChildren()) {
                         DBOrder order = orderSnapshot.getValue(DBOrder.class);
 
-                        if (order.getTinhtrang().equals(tinhtrang) || order.getTinhtrang().equals(tinhtrang1) || order.getTinhtrang().equals(tinhtrang2)) {
+                        if (order.getTinhtrang().equals(tinhtrang)) {
                             orderList.add(order);
                         }
 

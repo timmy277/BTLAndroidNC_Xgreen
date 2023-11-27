@@ -40,7 +40,7 @@ public class Home extends AppCompatActivity {
         /* Sự kiện Menu bottom Nav */
         /* Authentication */
         auth = FirebaseAuth.getInstance();
-        reference = FirebaseDatabase.getInstance().getReference();
+        reference = FirebaseDatabase.getInstance().getReference("taikhoan");
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,7 +53,7 @@ public class Home extends AppCompatActivity {
         if (currentUser != null) {
             String userId = currentUser.getUid();
             /* Hiển thị tên người dùng */
-            reference.child("taikhoan").child(userId).child("name").addListenerForSingleValueEvent(new ValueEventListener() {
+            reference.child(userId).child("name").addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                     String userName = snapshot.getValue(String.class);
